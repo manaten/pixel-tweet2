@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ドット絵掲示板</title>
+    <link rel='stylesheet' href='/static/css/bootstrap.min.css' type='text/css' media='all' />
+</head>
+<body>
+  <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="../" class="navbar-brand">まなドット - ドット絵掲示板</a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/">投稿</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://manaten.net">manaten.net</a></li>
+          <li><a href="http://blog.manaten.net">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+  {{range $}}
+    <div>
+      <h1>{{.Title}}</h1>
+      <div>{{.Image}}</div>
+      <div>{{.Description}}</div>
+    </div>
+  {{end}}
+  </div>
+</body>
+</html>
